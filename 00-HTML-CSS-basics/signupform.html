@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>Sign up form</title>
+	</head>
+	<body>
+		<h1>This is a sample sign up form</h1>
+		<form id="sign-up-form" action="submittedform.html" method="get">
+		    <ul>
+		        <li>
+		            <label for="first-name">First name:</label>
+		            <input type="text" name="first-name" id="first-name" required  pattern="[A-Z]{0,1}[a-z]{1,29}([\s]{1}[A-Z]{0,1}[a-z]{1,29})*" title="First name must be entered in lowercase or starting with uppercase. Maximum length 30 characters. You can enter more than one name separated by a space." />
+		        </li>
+		        <li>
+		            <label for="last-name">Last name:</label>
+		            <input type="text" name="last-name" id="last-name" required pattern="[A-Z]{0,1}[a-z]{1,29}([\s]{1}[A-Z]{0,1}[a-z]{1,29})*" title="Last name must be entered in lowercase or starting with uppercase. Maximum length 30 characters. You can enter more than one name separated by a space."/>
+		        </li>
+		        <li>
+		            <label for="email-addr">Email:</label>
+		            <input type="email" name="email-addr" id="email-addr" required />
+		        </li>
+		        <li>
+		            <label for="birthday">Your birthday:</label>
+		            <input type="date" name="birthday" id="birthday" required />
+		        </li>
+		        <li>
+		        	<label for="favourite-sport">Favourite sport:</label>
+							<select name="favourite-sport" id="favourite-sport" required>
+								<option value="">Select a sport</option>
+								<option value="soccer">Soccer</option>
+								<option value="golf">Golf</option>
+								<option value="football">Football</option>
+								<option value="basketball">Basketball</option>
+								<option value="tennis">Tennis</option>
+								<option value="tabletennis">Table tennis</option>
+								<option value="other">Other sport</option>
+							</select>
+						</li>
+		        <li>
+		            <label for="small-bio">Enter a small-bio:</label>
+		            <textarea name="small-bio" id="small-bio" cols="50" rows="7" required></textarea>
+		        </li>
+		        <li>
+		            <button type="submit">Submit</button>
+		            <button type="reset">Reset</button>
+		        </li>
+		    </ul>
+		</form>
+	</body>
+</html>

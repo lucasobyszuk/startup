@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>Image&#44; audio and video</title> <!-- &#44; is decimal reference for comma -->
+	</head>
+	<body>
+		<p>Here, an image:</p>
+		<img src="mediasource/exampleimage.png" alt="Picture of HTML5 icon" width="512" height="512" />
+		<p>Now, a video:</p>
+		<video width="720" height="480" controls>
+			<source src="mediasource/examplevideo.mp4"  type="video/mp4; codecs=avc1.42E01E,mp4a.40.2">
+			<source src="mediasource/examplevideo.webm" type="video/webm; codecs=vp8,vorbis">
+			<source src="mediasource/examplevideo.ogv"  type="video/ogg; codecs=theora,vorbis">
+		</video>
+		<p>Finally, an audio:</p>
+		<audio controls>
+			<source src="mediasource/exampleaudio.mp3" type="audio/mpeg; codecs=mp3">
+			<source src="mediasource/exampleaudio.ogg" type="audio/ogg; codecs=vorbis">
+		</audio>
+		<p>PD: Above media have no relationship to each other. Obviously.</p>
+	</body>
+</html>
