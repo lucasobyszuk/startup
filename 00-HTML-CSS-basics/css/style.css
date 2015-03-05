@@ -75,7 +75,7 @@ section article {
 	background-color: blue;
 }
 
-/* 2.3.6. Adding !important to the global font definition */
+/* 2.3.6. Doing a more specific selection in global font definition */
 
 /* 2.3.7 Doing a more specific selection and adding !important*/
 .oh-no-inline-styles {

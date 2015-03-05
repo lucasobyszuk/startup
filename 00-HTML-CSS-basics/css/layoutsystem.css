@@ -1,11 +1,7 @@
 *, *:before, *:after {
--moz-box-sizing: border-box;
--webkit-box-sizing: border-box;
-box-sizing: border-box;
-}
-
-header {
-	height: 10rem;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 /* Small screens (default) */
@@ -15,6 +11,7 @@ html {
  
 /* Medium screens (640px) */
 @media (min-width: 40rem) {
+	
 	html { font-size: 112%; }
 
 	.column {
@@ -28,7 +25,6 @@ html {
 	.column.third { width: 33.3%; }
 	.column.fourth { width: 25%; }
 	.column.flow-opposite { float: right; }
-	}
 }
  
 /* Large screens (1024px) */
@@ -58,6 +54,7 @@ html {
 img {
 	width:100%;
 }
+
 .image {
 	position: relative;
 }
@@ -70,9 +67,8 @@ img {
 	display: none;
 	position: absolute;
 	text-align: center;
-	
 }
 
 .image:hover .description{
 	display: inline-block;
-};
+}
