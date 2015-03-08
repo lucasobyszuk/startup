@@ -27,3 +27,24 @@ DownloadableMovie.prototype.constructor = DownloadableMovie;
 DownloadableMovie.prototype.download = function() {
 		console.log("Downloading movie");
 }
+
+// Mixin object
+var Social = {
+	share: function(friendName) {
+		console.log('Sharing '+this.get('title')+' with '+friendName);
+
+	},
+
+	like: function() {
+		console.log('You like '+this.get('title')+' now.')
+	}
+}
+
+function addMixin (mixin,target) {
+	for (var prop in mixin) 
+		if (mixin.hasOwnProperty(prop)) 
+			target[prop] = mixin[prop];
+}
+
+// Add Social properties to Movie
+addMixin(Social,Movie.prototype);
