@@ -48,3 +48,27 @@ function addMixin (mixin,target) {
 
 // Add Social properties to Movie
 addMixin(Social,Movie.prototype);
+
+// Practice 11: Create an Actor class and create some actors from one of your favorite movies.
+function Actor(firstName,lastName) {
+	this.firstName = firstName;
+	this.lastName = lastName;
+	// Some other properties here.
+}
+
+// "create some actors"
+// I created the actors directly as array elements.
+var arrayOfActors = [new Actor('Jim','Carrey'), new Actor('Ricardo','Darin'), new Actor('Will','Smith'), new Actor('Angelina','Jolie')];
+
+// Practice 12: Show how you would add an array of actors to a Movie object.
+// It could be:
+
+	var terminator = new Movie();
+	terminator.set('title','Terminator');
+
+	// Add array of actors like some other attribute.
+	terminator.set('actors',arrayOfActors);
+
+// Another way to achieve this might be adding a array "Actors" as property of "Movie"
+// or adding the array as inner var (like attributes) and getActors/setActors methods should be added.
+
