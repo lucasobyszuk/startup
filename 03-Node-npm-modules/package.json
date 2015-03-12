@@ -1,0 +1,11 @@
+{
+  "name": "03-Node-npm-modules",
+  "version": "1.0.0",
+  "description": "Json Package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lucas Obyszuk",
+  "license": "ISC"
+}
