@@ -1,0 +1,40 @@
+body {
+	background-color: #e3d69d;
+	padding: 30px;
+	width: 100%;
+}
+
+.movie {
+	background-color: #ecf0f1;
+	border-radius: 4px;
+	width: calc(100% - 60px);
+	box-sizing: border-box;
+	padding: 25px;
+	margin-top: 10px;
+	overflow: hidden;
+}
+
+.movie img {
+	width: 150px;
+	margin-right: 15px;
+	float: left;
+}
+
+.movie h1 {
+	font-size: 60px;
+	margin: 0px;
+}
+
+.movie .description {
+	margin: 10px 0px 0px 0px;
+	font-style: italic;
+	font-size: 22px;
+}
+
+.movie .subtitle {
+	color: gray;
+	font-size: 18px;
+	display: inline-block;
+	border: 2px solid gray;
+	padding: 5px;
+}
