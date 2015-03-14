@@ -25,5 +25,20 @@
 			</div>
 		</script>
 
+		<!-- Exercise 2: Create a second template to render a list of movies -->
+		<script id="list-movies-template" type="text/x-handlebars-template">
+			<ul>
+				{{#each movies}}
+					<li>{{title}}</li>
+				{{/each}}
+			</ul>
+		</script>
+
+		<div id="details"></div>
+
+		<div id="list-movies" class="list-movies">
+			<h1>List of movies:</h1>
+		</div>
+
 	</body>
 </html>

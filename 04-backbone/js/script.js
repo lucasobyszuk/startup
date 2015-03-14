@@ -44,7 +44,13 @@ var data = {
 }
 
 $(document).ready(function() {
-			var template = $('#movie-template').html();
-			var html = Handlebars.compile(template);
-			$('body').append(html(data.movies[0]));
+	// Render first movie in 'data'
+	var template = $('#movie-template').html();
+	var html = Handlebars.compile(template);
+	$('#details').append(html(data.movies[0]));
+
+	// Render list of movies
+	template = $('#list-movies-template').html();
+	html = Handlebars.compile(template);
+	$('#list-movies').append(html(data));
 });

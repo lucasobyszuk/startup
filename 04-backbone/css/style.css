@@ -4,7 +4,7 @@ body {
 	width: 100%;
 }
 
-.movie {
+.movie, .list-movies {
 	background-color: #ecf0f1;
 	border-radius: 4px;
 	width: calc(100% - 60px);
@@ -37,4 +37,8 @@ body {
 	display: inline-block;
 	border: 2px solid gray;
 	padding: 5px;
+}
+
+.list-movies li {
+	list-style: none;
 }
