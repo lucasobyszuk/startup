@@ -29,14 +29,17 @@
 
 		<!-- Exercise 2: Create a second template to render a list of movies -->
 		<script id="movie-template" type="text/x-handlebars-template">
-			<li>{{attributes.title}} <button class="showDetails" id="{{cid}}">Show details</button></li>
+			<li>
+				<span class="{{cid}}">{{attributes.title}}</span>
+				<button class="showDetails" id="{{cid}}">Show details</button>
+			</li>
 		</script>
 
 		<!-- ############################################################################### -->
 		<!-- Divs below are the place where script.js will put more html code -->
 		<!-- ############################################################################### -->
 		<div id="list-movies" class="list-movies">
-			<h1>List of movies:</h1>
+			<h1>Your movies</h1>
 		</div>
 
 		<div id="details"></div>

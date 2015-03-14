@@ -71,3 +71,20 @@ $('#list-movies').on('click', '.showDetails', function(event) {
 	detailsView.render(collection.get($(event.target).attr('id')));
 });
 
+
+
+// ------------------------------------------------------------------------
+// Code to change styles
+// ------------------------------------------------------------------------
+
+$('#list-movies').on('mouseover', '.showDetails', function(event) {
+	var target = '.' + $(event.target).attr('id');
+	console.log(target);
+	$('#list-movies '+target).css('font-weight', 'bold');
+});
+
+$('#list-movies').on('mouseleave', '.showDetails', function(event) {
+	var target = '.' + $(event.target).attr('id');
+	console.log(target);
+	$('#list-movies '+target).css('font-weight', '500');
+});
