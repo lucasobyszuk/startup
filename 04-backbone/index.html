@@ -6,39 +6,50 @@
 		<title>Topic 4</title>
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
-		<script type="text/javascript" src="lib/handlebars-v3.0.0.js"></script>
-		<script type="text/javascript" src="lib/jquery-1.11.2.js"></script>
-		<script type="text/javascript" src="js/script.js"></script>
+
 	</head>
 	<body>
 
+		<!-- ############################################################################### -->
+		<!-- Handlebars templates-->
+		<!-- ############################################################################### -->
+
 		<!-- Exercise 1: Handlebars template to show the details of a movie -->
-		<script id="movie-template" type="text/x-handlebars-template">
+		<script id="movie-details-template" type="text/x-handlebars-template">
 			<div class="movie">
-				<img src="images/{{imageFileName}}" />
-				<h1>{{title}}</h1>
-				<p class="subtitle">Genre: {{genre}}</p>
-				<p class="subtitle">Year: {{year}}</p>
-				<p class="subtitle">Duration: {{duration}}</p>
-				<p class="subtitle">Director: {{director}}</p>
-				<p class="description">{{description}}</p>
+				<img src="images/{{attributes.imageFileName}}" onerror="if (this.src != 'images/missing.jpg') this.src = 'images/missing.jpg';" />
+				<h1>{{attributes.title}}</h1>
+				<p class="subtitle">Genre: {{attributes.genre}}</p>
+				<p class="subtitle">Year: {{attributes.year}}</p>
+				<p class="subtitle">Duration: {{attributes.duration}}</p>
+				<p class="subtitle">Director: {{attributes.director}}</p>
+				<p class="description">{{attributes.description}}</p>
 			</div>
 		</script>
 
 		<!-- Exercise 2: Create a second template to render a list of movies -->
-		<script id="list-movies-template" type="text/x-handlebars-template">
-			<ul>
-				{{#each movies}}
-					<li>{{title}}</li>
-				{{/each}}
-			</ul>
+		<script id="movie-template" type="text/x-handlebars-template">
+			<li>{{attributes.title}} <button class="showDetails" id="{{cid}}">Show details</button></li>
 		</script>
 
-		<div id="details"></div>
-
+		<!-- ############################################################################### -->
+		<!-- Divs below are the place where script.js will put more html code -->
+		<!-- ############################################################################### -->
 		<div id="list-movies" class="list-movies">
 			<h1>List of movies:</h1>
 		</div>
+
+		<div id="details"></div>
+
+		<!-- ############################################################################### -->
+		<!-- Libraries -->
+		<!-- ############################################################################### -->
+		<script type="text/javascript" src="lib/underscore.js"></script>
+		<script type="text/javascript" src="lib/handlebars-v3.0.0.js"></script>
+		<script type="text/javascript" src="lib/jquery-1.11.2.js"></script>
+		<script type="text/javascript" src="lib/backbone-1.0.0.js"></script>
+		<script type="text/javascript" src="lib/localstorage.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
 
 	</body>
 </html>
