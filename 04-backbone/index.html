@@ -8,15 +8,14 @@
 		<link rel="stylesheet" href="css/style.css">
 
 	</head>
-	<body>
-
+	<body>	
 		<!-- ############################################################################### -->
 		<!-- Handlebars templates-->
 		<!-- ############################################################################### -->
 
 		<!-- Exercise 1: Handlebars template to show the details of a movie -->
 		<script id="movie-details-template" type="text/x-handlebars-template">
-			<div class="movie">
+			<div class="movie" id="{{cid}}">
 				<img src="images/{{attributes.imageFileName}}" onerror="if (this.src != 'images/missing.jpg') this.src = 'images/missing.jpg';" />
 				<h1>{{attributes.title}}</h1>
 				<p class="subtitle">Genre: {{attributes.genre}}</p>
@@ -29,11 +28,65 @@
 
 		<!-- Exercise 2: Create a second template to render a list of movies -->
 		<script id="movie-template" type="text/x-handlebars-template">
-			<li>
+			<li class="{{cid}} listItem">
 				<span class="{{cid}}">{{attributes.title}}</span>
 				<button class="showDetails" id="{{cid}}">Show details</button>
 			</li>
 		</script>
+
+		<!-- ############################################################################### -->
+		<!-- Divs below serves to exercise 5 -->
+		<!-- ############################################################################### -->
+		<div class="options">
+			
+			<h1>Edit your movies</h1>
+			<p>To cancel an action, press the same button again.</p>
+			<div class="main-options">
+				<button id="add">Add</button>
+				<button id="remove">Remove</button>
+				<button id="edit">Edit</button>
+			</div>
+
+			<div class="secondary-options add">
+				<h2>Add movie</h2>
+				<input type="text" class="title" placeholder="Title">
+				<input type="text" class="director" placeholder="Director">
+				<input type="text" class="year" placeholder="Year">
+				<input type="text" class="duration" placeholder="Duration">
+				<input type="text" class="genre" placeholder="Genre">
+				<br />
+				<textarea cols="80" rows="5" name="description" class="description" placeholder="Description"></textarea>
+				<br />
+				<input type="button" value="Confirm" class="confirm">
+			</div>
+
+			<div class="secondary-options remove">
+				<h2>Remove</h2>
+				<select class="remove" id="select-remove">
+				</select>
+				<br />
+				<input type="button" value="Confirm" class="confirm">
+			</div>
+
+			<div class="secondary-options edit">
+				<h2>Edit movie</h2>
+				<select id="select-edit">
+				</select>
+				<input type="button" value="Select movie" id="selected">
+				<br />			
+				<input type="text" class="title" placeholder="Title">
+				<input type="text" class="director" placeholder="Director">
+				<input type="text" class="year" placeholder="Year">
+				<input type="text" class="duration" placeholder="Duration">
+				<input type="text" class="genre" placeholder="Genre">
+				<br />
+				<textarea cols="80" rows="5" name="description" class="description" placeholder="Description"></textarea>
+				<br />
+				<input type="button" value="Confirm" class="confirm">
+
+			</div>
+
+		</div>
 
 		<!-- ############################################################################### -->
 		<!-- Divs below are the place where script.js will put more html code -->
@@ -50,9 +103,10 @@
 		<script type="text/javascript" src="lib/underscore.js"></script>
 		<script type="text/javascript" src="lib/handlebars-v3.0.0.js"></script>
 		<script type="text/javascript" src="lib/jquery-1.11.2.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="lib/backbone-1.0.0.js"></script>
 		<script type="text/javascript" src="lib/localstorage.js"></script>
+		<script src="https://www.google.com/jsapi"></script>
 		<script type="text/javascript" src="js/script.js"></script>
-
 	</body>
 </html>

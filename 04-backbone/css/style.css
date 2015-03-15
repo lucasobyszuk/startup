@@ -5,23 +5,28 @@ body {
 	color: #900;
 }
 
-.movie, .list-movies {
+h1, ul, h2 {
+	margin: 0;
+}
+
+.movie, .list-movies, .options {
 	background-color: #ecf0f1;
 	border-radius: 4px;
 	box-sizing: border-box;
 	padding: 25px;
 	margin-top: 10px;
-	float: left;
 }
 
 .list-movies {
 	text-align: right;
 	margin-right: 10px;
 	width: 25%;
+	float: left;
 }
 
 .movie {
 	overflow: hidden;
+	float: left;
 	width: calc(75% - 70px);
 }
 
@@ -36,7 +41,6 @@ body {
 
 .movie h1 {
 	font-size: 60px;
-	margin: 0px;
 	text-shadow: 2px 2px 2px black;
 }
 
@@ -55,19 +59,19 @@ body {
   background-color: #FFC;
 }
 
-.list-movies li {
+.list-movies li, .options li {
 	list-style: none;
 	margin-top: 10px;
 	font-style: italic;
 	font-weight: 500;
 }
 
-.list-movies h1 {
+.list-movies h1, .options h1 {
 	text-align: left;
 	text-shadow: 2px 2px 1px black;
 }
 
-.showDetails {
+button {
 	padding: 2px 4px;
   border: 3px double #FC6;
   color: #900;
@@ -76,9 +80,57 @@ body {
   font-style: normal;
 }
 
-.showDetails:hover {
+button:hover {
   border-color: red;
   color: white;
   font-weight: bold;
   background-color: #900;
+}
+
+div.options {
+	float: none;
+	display: inline-block;
+	width: calc(75% - 70px)
+}
+
+.main-options {
+	margin: 10px 0px;
+}
+
+.main-options button {
+	width: 33%;
+}
+
+.secondary-options {
+	display: none;
+	padding: 10px;
+	background-color: #900;
+	opacity: 0.5;
+	box-shadow: 0 10px 10px 0px #900;
+	border: 1px solid #900;
+	text-align: center;
+	color: white;
+}
+
+.secondary-options input, .secondary-options textarea {
+	margin: 10px;
+	color: black;
+}
+
+input[type="file"] {
+	color: white;
+}
+
+select {
+	color: black;
+}
+
+.confirm {
+	width: 50%;
+	padding: 2px 0;
+	color: black;
+}
+
+.selected {
+	color: black;
 }
